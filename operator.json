@@ -1,9 +1,9 @@
 {
-  "name": "Median",
-  "description": "Return the medium value of a cell",
+  "name": "Mean imputation operator",
+  "description": "Replace missing values by the column mean",
   "tags": ["basic statistics"],
   "authors": ["tercen"],
-  "urls": ["https://github.com/tercen/template_operator"],
+  "urls": ["https://github.com/tercen/mean_imputation_operator"],
   "properties": []
 }
 
