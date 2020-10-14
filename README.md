@@ -8,19 +8,11 @@
 
 Input projection|.
 ---|---
+`row`        | factor, observations 
+`column`        | factor, variables 
 `y-axis`        | numeric, input data, per cell 
 
 Output relations|.
 ---|---
-`median`        | numeric, median of the input data
+`mean_imputed`        | numeric, measurements with missing values replaced by column mean
 
-##### Details
-
-#### References
-
-
-##### See Also
-
-[mean_operator](https://github.com/tercen/mean_operator)
-
-#### Examples

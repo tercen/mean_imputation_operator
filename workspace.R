@@ -1,19 +1,24 @@
 library(tercen)
+library(tidyr)
 library(dplyr)
+library(reshape2)
 
-options("tercen.workflowId" = "b5eee6b1ed83d50347d04d6ba20a0f29")
-options("tercen.stepId"     = "adf28ca1-c14f-43ae-95a8-c78c2a5b1c56")
+options("tercen.workflowId" = "a77770c3923fad0ca99b77fa8905471d")
+options("tercen.stepId"     = "2edb4d6b-ebb5-4334-a184-37762f1eb51e")
 
 mat <- (ctx = tercenCtx()) %>%
-  as.matrix %>% 
-  t %>%
+  select(.ci, .ri, .y) %>% 
+  reshape2::acast(.ri ~ .ci, value.var='.y', fill = NA) %>%
   as.data.frame
 
 mat[] <- lapply(mat, function(x) ifelse(is.na(x) | is.nan(x), mean(x, na.rm = TRUE), x)) 
 colnames(mat) <- 1:ncol(mat) - 1
 
-matrix <- t(mat)
-ctx %>% select(.ci, .ri) %>% mutate(mean_imputed = as.double(matrix)) %>%
-    ctx$addNamespace() %>%
-    ctx$save()
+mat_out <- mat %>%
+  mutate(.ri = 1:nrow(.) - 1) %>%
+  gather(.ci, mean_imputed, -.ri)              
+
+mat_out %>%
+  ctx$addNamespace() %>%
+  ctx$save()
 

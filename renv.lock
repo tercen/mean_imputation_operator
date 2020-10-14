@@ -148,6 +148,13 @@
       "Repository": "CRAN",
       "Hash": "09eb987710984fc2905c7129c7d85e65"
     },
+    "plyr": {
+      "Package": "plyr",
+      "Version": "1.8.5",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "3f1b0dbcc503320e6e7aae6c3ff87eaa"
+    },
     "purrr": {
       "Package": "purrr",
       "Version": "0.3.2",
@@ -162,12 +169,33 @@
       "Repository": "CRAN",
       "Hash": "5181d5f316c7a6589219866d640e004c"
     },
+    "reshape2": {
+      "Package": "reshape2",
+      "Version": "1.4.3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "15a23ad30f51789188e439599559815c"
+    },
     "rlang": {
       "Package": "rlang",
       "Version": "0.4.2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "ff31d958a041593f58ba04fc637d90dd"
+    },
+    "stringi": {
+      "Package": "stringi",
+      "Version": "1.4.5",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "ced3b63472796155f74abc4eb5266c78"
+    },
+    "stringr": {
+      "Package": "stringr",
+      "Version": "1.4.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "0759e6b6c0957edb1311028a49a35e76"
     },
     "teRcenHttp": {
       "Package": "teRcenHttp",
@@ -189,6 +217,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "8248ee35d1e15d1e506f05f5a5d46a75"
+    },
+    "tidyr": {
+      "Package": "tidyr",
+      "Version": "0.8.3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "066365650c48620e116631c98ae8daf3"
     },
     "tidyselect": {
       "Package": "tidyselect",
