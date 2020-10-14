@@ -1,4 +1,5 @@
 library(tercen)
+library(tidyr)
 library(dplyr)
 
 mat <- (ctx = tercenCtx()) %>%
