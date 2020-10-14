@@ -9,8 +9,11 @@ mat <- (ctx = tercenCtx()) %>%
 mat[] <- lapply(mat, function(x) ifelse(is.na(x) | is.nan(x), mean(x, na.rm = TRUE), x)) 
 colnames(mat) <- 1:ncol(mat) - 1
 
-mat_out <- t(mat)
-ctx %>% select(.ci, .ri) %>% mutate(mean_imputed = as.double(mat_out)) %>%
+mat_out <- mat %>%
+  mutate(.ci = 1:nrow(.) - 1) %>%
+  gather(.ri, mean_imputed, -.ci)              
+
+mat_out %>%
   ctx$addNamespace() %>%
   ctx$save()
 
